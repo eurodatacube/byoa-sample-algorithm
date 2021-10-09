@@ -2,6 +2,8 @@
 
 This repository contains a scaffold for the respository structure required for Bring Your Own Algorithm.
 
+A (simplified) version to calculate a [Maximum Chlorophyll Index (MCI)](https://eurodatacube.com/marketplace/notebooks/getting-started/EDC_Sentinel_Hub-XCUBE_integration.ipynb) is used as sample algorithm.
+
 Please consult the [EDC documentation](https://eurodatacube.com/documentation/offer_algorithms_for_on_demand_data_generation) for more information.
 
 
@@ -19,37 +21,11 @@ This algorithm can be onboarded to the EDC platform using the following paramete
         "optional": false
     },
     {
-        "name": "Band name",
-        "id": "band_name",
-        "type": "string",
-        "description": "Band name to use as data source",
-        "optional": false,
-        "restriction": {
-             "type": "choice",
-             "value": [
-                 "B04",
-                 "B05",
-                 "B06"
-             ]
-        }
-    },
-    {
         "name": "Spatial Resolution",
         "id": "spatial_res",
         "type": "float",
         "description": "Spatial Resolution",
-        "optional": false
-    },
-    {
-        "name": "Max. cloud coverage",
-        "id": "maxCC",
-        "type": "float",
-        "description": "Maximal cloud coverage in percentage",
-        "optional": true,
-        "restriction": {
-          "type": "range",
-          "value": [0, 100]
-        }
+        "optional": true
     }
 ]
 ```
